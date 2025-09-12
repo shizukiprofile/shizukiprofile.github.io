@@ -663,6 +663,123 @@ body {
     margin-bottom: var(--spacing-xl);
 }
 
+/* NPC Section */
+.npc-section {
+    margin: var(--spacing-2xl) 0;
+}
+
+.npc-section h3 {
+    font-size: 2rem;
+    color: var(--japan-gold);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    font-family: var(--font-serif);
+}
+
+.npc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.npc-item {
+    background: var(--glass-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+}
+
+.npc-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.npc-image {
+    position: relative;
+    height: 250px;
+}
+
+.npc-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.npc-overlay {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+}
+
+.npc-danger-indicator {
+    background: linear-gradient(135deg, var(--japan-red), #8b0000);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-md);
+}
+
+.npc-ally-indicator {
+    background: linear-gradient(135deg, var(--japan-blue), var(--japan-indigo));
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-md);
+}
+
+.npc-content h4 {
+    color: var(--japan-gold);
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-serif);
+}
+
+.npc-details {
+    margin-bottom: var(--spacing-md);
+}
+
+.npc-basic {
+    display: flex;
+    margin-bottom: var(--spacing-xs);
+    flex-wrap: wrap;
+}
+
+.npc-label {
+    color: var(--text-muted);
+    font-weight: 600;
+    min-width: 60px;
+    margin-right: var(--spacing-sm);
+}
+
+.npc-value {
+    color: var(--text-primary);
+    font-weight: 500;
+    flex: 1;
+}
+
+.npc-description p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+.npc-description p strong {
+    color: var(--japan-gold);
+}
+
 .worldview-item {
     background: var(--glass-bg);
     padding: var(--spacing-lg);
@@ -1753,6 +1870,19 @@ body {
     
     .speech-content {
         grid-template-columns: 1fr;
+    }
+    
+    .npc-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .npc-item {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .npc-image {
+        height: 200px;
     }
     
     .gallery-grid {

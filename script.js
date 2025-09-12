@@ -364,6 +364,7 @@ function initializeAnimations() {
     const animateElements = document.querySelectorAll(`
         .overview-grid,
         .worldview-item,
+        .npc-item,
         .location-item,
         .characteristic-item,
         .layer,
@@ -381,6 +382,7 @@ function initializeAnimations() {
     style.textContent = `
         .overview-grid,
         .worldview-item,
+        .npc-item,
         .location-item,
         .characteristic-item,
         .layer,
@@ -402,6 +404,10 @@ function initializeAnimations() {
         }
         
         .worldview-item:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+        
+        .npc-item:nth-child(2) {
             transition-delay: 0.2s;
         }
         
